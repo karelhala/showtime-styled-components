@@ -1,6 +1,10 @@
 import React from 'react';
 
 export default () => (
-    <header className="app-header">
+    <header className="ssc-c-header">
+        <div>
+            Logo
+        </div>
+        
     </header>
 )

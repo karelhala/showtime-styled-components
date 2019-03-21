@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 export default () => (
-    <aside>
+    <aside className="ssc-c-navigation">
         <ul>
             <li>
-                First nav
+                <Link to="/first">First nav</Link>
             </li>
             <li>
-                Second nav
+                <Link to="/second">First nav</Link>
             </li>
             <li>
-                third nav
+                <Link to="/third">First nav</Link>
             </li>
         </ul>
     </aside>

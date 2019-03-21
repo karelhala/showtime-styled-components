@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 
 export default () => (
-    <main>
+    <main className="ssc-c-main">
         <Card>
             This is Card
         </Card>
