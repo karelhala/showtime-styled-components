@@ -1,10 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 import { About, Galery, Posts } from '../../pages';
-import './Main.scss';
 
-export default () => (
-    <main className="ssc-c-main">
+const Main = styled.div`
+  flex-direction: column;
+  grid-column-end: main;
+  grid-column-start: main;
+  grid-row-end: main;
+  grid-row-start: main;
+  background-color: rgb(237, 237, 237);
+`;
+
+export default (props) => (
+    <Main {...props}>
         <Switch>
             <Route exact path={'/'} component={Posts}></Route>
             <Route exact path={'/about'} component={About}></Route>
@@ -18,5 +27,5 @@ export default () => (
                 </Card>
             </GridItem>
         </Grid> */}
-    </main>
+    </Main>
 )

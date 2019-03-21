@@ -3,16 +3,16 @@ import Card from '../components/Card';
 import Grid from '../components/Grid';
 import GridItem from '../components/GridItem'
 
-export default () => 
+export default () =>
 <Grid>
     <GridItem columns={8} start={3}>
-        <Card className="ssc-u-large-text">
+        <Card largeText>
             Dominik tilp
         </Card>
-        <Card className="ssc-u-large-text">
+        <Card largeText>
             Karel Hala
         </Card>
-        <Card className="ssc-u-large-text">
+        <Card largeText>
             Michal Vyšinský
         </Card>
     </GridItem>

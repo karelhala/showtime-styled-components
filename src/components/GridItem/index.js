@@ -1,11 +1,6 @@
-import React from 'react';
+import styled from 'styled-components';
 
-export default ({ children, columns, className, start, ...props }) => {
-    const col = `ssc-l-grid__item--col-${columns || 1}`;
-    const colStart = start ? `ssc-l-grid__item--col-start-${start}` : '';
-    return (
-        <div className={`ssc-l-grid__item ${col} ${colStart}`} {...props}>
-            {children}
-        </div>
-    );
-};
+export default styled.div`
+  grid-column-end: span ${props => props.columns || 1};
+  grid-column-start: ${props => props.start || 'auto'};
+`;

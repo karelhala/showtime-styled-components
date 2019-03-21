@@ -1,10 +1,6 @@
-import React from 'react';
-import './Grid.scss';
+import styled from 'styled-components';
 
-export default ({ children, columns, className, ...props }) => {
-    return (
-        <div className={`ssc-l-grid`} {...props}>
-            {children}
-        </div>
-    );
-};
+export default styled.div`
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr );
+`;
