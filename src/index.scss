@@ -120,8 +120,9 @@ aside.ssc-c-navigation {
                 }
             }
 
-            &.active {
+            &.ssc-u-active {
                 color:rgb(0, 123, 186);
+                padding-left: 0;
 
                 &::before {
                     background-color:rgb(0, 123, 186);
