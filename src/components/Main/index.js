@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { About, Galery, Posts } from '../../pages';
+import './Main.scss';
 
 export default () => (
     <main className="ssc-c-main">

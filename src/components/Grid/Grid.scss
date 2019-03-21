@@ -1,0 +1,24 @@
+@mixin generateGridCol($class-slug) {
+  @for $i from 1 through 12 {
+    .#{$class-slug}-#{$i} {
+      grid-column-end: span $i;
+      grid-column-start: auto;
+    }
+  }
+}
+
+@mixin generateGridColStart($class-slug) {
+  @for $i from 1 through 12 {
+    .#{$class-slug}-#{$i} {
+      grid-column-start: col-start $i;
+    }
+  }
+}
+
+.ssc-l-grid {
+  display: grid;
+  grid-template-columns: unquote("repeat(12, [col-start] 1fr )");
+
+  @include generateGridCol("ssc-l-grid__item--col");
+  @include generateGridColStart("ssc-l-grid__item--col-start");
+}

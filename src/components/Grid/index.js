@@ -1,4 +1,5 @@
 import React from 'react';
+import './Grid.scss';
 
 export default ({ children, columns, className, ...props }) => {
     return (
