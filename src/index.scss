@@ -1,3 +1,20 @@
+@mixin generateGridCol($class-slug) {
+    @for $i from 1 through 12 {
+        .#{$class-slug}-#{$i} {
+            grid-column-end: span $i;
+            grid-column-start: auto;
+        }
+  }
+}
+
+@mixin generateGridColStart($class-slug) {
+    @for $i from 1 through 12 {
+        .#{$class-slug}-#{$i} {
+            grid-column-start: col-start $i;
+        }
+  }
+}
+
 html, body { height: 100%; }
 
 body {
@@ -27,6 +44,35 @@ main.ssc-c-main {
     grid-row-end: main;
     grid-row-start: main;
     background-color: rgb(237, 237, 237);
+}
+
+.ssc-l-grid {
+    display: grid;
+    grid-template-columns: unquote("repeat(12, [col-start] 1fr )");
+
+    @include generateGridCol("ssc-l-grid__item--col");
+    @include generateGridColStart("ssc-l-grid__item--col-start");
+}
+
+.ssc-c-card {
+    background: #FFF;
+    margin: 20px;
+    min-height: 50px;
+    box-shadow:rgba(3, 3, 3, 0.2) 0px 1px 2px 0px;
+    padding: 20px;
+
+    &.ssc-u-stripped {
+        background: linear-gradient(to bottom, #ffffff, #ffffff 97%, #b0b0b0 3%, #b0b0b0);
+        background-size: 100% 40px;
+        line-height: 4;
+        font-size: 20px;
+    }
+
+    &.ssc-u-large-text {
+        text-align: center;
+        line-height: 2;
+        font-size: 20px;
+    }
 }
 
 aside.ssc-c-navigation {

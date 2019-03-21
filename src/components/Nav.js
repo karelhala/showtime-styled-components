@@ -5,13 +5,13 @@ export default () => (
     <aside className="ssc-c-navigation">
         <ul>
             <li>
-                <Link to="/first">First nav</Link>
+                <Link to="/">Post</Link>
             </li>
             <li>
-                <Link to="/second">First nav</Link>
+                <Link to="/galery">Galery</Link>
             </li>
             <li>
-                <Link to="/third">First nav</Link>
+                <Link to="/about">About</Link>
             </li>
         </ul>
     </aside>
